@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+// ::selection {
+//   background-color: $clr1;
+//   color: $clr6;
+// }
+
+html {
+  font-family: montserrat;
+  line-height: 1.6;
+}
+
+body {
+  margin: 0;
+  color: $clr7;
+  background-image: linear-gradient($clr8, $clr9);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: montserrat;
+  margin: 0 0 0.6em;
+  line-height: 1;
+  text-align: center;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+  font-family: montserrat;
+}
+
+.weather-app, .favorites-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-fav {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.active {
+    font-size: 2rem;
+    .MuiIcon-root {
+      color: blue;
+    }
+  }
+}
+
+.btn-unit {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  box-shadow: 1px 1px 2px 2px #00000033;
+  border-radius: 10px;
+}

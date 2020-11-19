@@ -1,0 +1,45 @@
+.search-box {
+  width: 400px;
+  height: 48px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #dcdcdc;
+  background-color: transparent;
+
+  @include for-mobile-layout {
+    width: 300px;
+  }
+}
+
+.search-input {
+  width: 100%;
+  border-radius: 100px;
+  border: 0px solid;
+  outline: none;
+  font-size: 1.25rem;
+  background-color: transparent;
+  margin-left: 30px;
+}
+
+.search-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 50px;
+  margin: 10px;
+  color: blue;
+  cursor: pointer;
+}
+
+.MuiOutlinedInput-notchedOutline{
+  border:0 !important;
+}
+
+.bold{
+  color: blue;
+}
