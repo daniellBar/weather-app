@@ -7,7 +7,6 @@ export function ForecastPreview(props) {
     const { forecast,unit } = props;
     const minTempF = forecast.Temperature.Minimum.Value;
     const maxTempF = forecast.Temperature.Maximum.Value;
-    console.log(unit);
     return (
         <div className="forecast-preview" >
             <div className="forecast-info">

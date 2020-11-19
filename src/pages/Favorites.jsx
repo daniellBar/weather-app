@@ -18,9 +18,8 @@ export class Favorites extends Component {
     }
 
     loadFavorites = async () => {
-        console.log('hello favorites');
         const favorites = await locationService.getFavorites();
-        this.setState({ favorites: favorites }, () => { console.log(this.state.favorites); })
+        this.setState({ favorites: favorites })
     }
 
     onDelete = (locationKey) => {

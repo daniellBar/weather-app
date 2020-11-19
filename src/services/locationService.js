@@ -30,7 +30,6 @@ async function getSuggested(input) {
     _loadSuggested()
     const queryStr = `cities/autocomplete?apikey=${KEY}&q=${input}`;
     const suggested = await httpService.get(queryStr, LOCATION_API);
-    console.log(suggested);
     const reducedSuggested = suggested.map(location => {
         return {
             key: location.Key,
@@ -41,7 +40,6 @@ async function getSuggested(input) {
             fullDisplayName: `${location.LocalizedName}, ${location.AdministrativeArea.LocalizedName}, ${location.Country.LocalizedName}`
         }
     })
-    console.log(reducedSuggested);
     gSuggested[input] = reducedSuggested;
     _saveSuggested();
     return reducedSuggested;
@@ -53,9 +51,7 @@ async function getLocation(locationInfo) {
     const locationFromStorage = _queryStorage(locationKey, 'locations')
     if (locationFromStorage) {
         console.log('found in storage');
-        console.log(_checkDatesValidity(locationFromStorage));
         if (_checkDatesValidity(locationFromStorage)) {
-            console.log('im inside validity if');
             return locationFromStorage;
         }
     }
@@ -69,7 +65,6 @@ async function getLocation(locationInfo) {
         dailyForecasts: locationForecast.DailyForecasts
     }
     gLocations[locationKey] = location;
-    console.log(gLocations);
     _saveLocations();
     return location;
 }
@@ -89,13 +84,9 @@ async function getFavorites() {
 
 function toggleFromFavorites(locationInfo) {
     const { locationKey, locationName } = locationInfo;
-    console.log(locationKey);
-    console.log(locationName);
     const favorites = storageService.loadFromStorage('favorites');
     if (!favorites) {
-        console.log('helloo');
         gFavorites[locationKey] = locationName
-        console.log(gFavorites);
     }
     else {
         favorites.hasOwnProperty(locationKey) ? delete favorites[locationKey] : favorites[locationKey] = locationName;

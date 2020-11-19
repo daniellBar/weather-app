@@ -20,7 +20,6 @@ class _SearchBox extends Component {
     }
 
     handleSelect = (event, val) => {
-        console.log(this.props);
         if (!val) return
         const locationInfo={
            locationKey :val.key,
