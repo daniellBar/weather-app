@@ -2,13 +2,15 @@ import Axios from 'axios';
 
 const FORECAST_URL = 'http://dataservice.accuweather.com/forecasts/v1/daily/5day/'
 const LOCATION_URL = 'http://dataservice.accuweather.com/locations/v1/'
+const GEOCODE_URL = 'https://api.opencagedata.com/geocode/v1/'
+
 
 
 var axios = Axios.create({
     withCredentials: false
 });
 
-export default {
+export const httpService = {
     get(endpoint, data) {
         console.log('data-', data);
         return ajax(endpoint, 'GET', data)
@@ -18,13 +20,15 @@ export default {
 async function ajax(endpoint, method = 'get', data = null) {
     try {
         let baseUrl;
-        if(data==='locationApi'){
-            baseUrl=LOCATION_URL;
+        if (data === 'locationApi') {
+            baseUrl = LOCATION_URL;
         }
-        else if (data==='forecastApi'){
-            baseUrl=FORECAST_URL;
+        else if (data === 'forecastApi') {
+            baseUrl = FORECAST_URL;
         }
-        else return;
+        else if (data === 'geocodeApi') {
+            baseUrl = GEOCODE_URL;
+        }
         const res = await axios({
             url: `${baseUrl}${endpoint}`,
             method,
@@ -32,11 +36,8 @@ async function ajax(endpoint, method = 'get', data = null) {
         })
         return res.data;
     } catch (err) {
-        console.log(`Had Issues ${method}ing to the backend, endpoint: ${endpoint}, with data: ${data}`);
+        console.log(`Had Issues ${method}ing to the API, endpoint: ${endpoint}, with data: ${data}`);
         console.dir(err);
-        if (err.response && err.response.status === 401) {
-            window.location.assign('/#/login');
-        }
         throw err;
     }
 }

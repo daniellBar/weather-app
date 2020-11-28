@@ -1,10 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { SearchBox } from '../cmps/SearchBox'
 
 
-export function Header() {
-    return <div className="">
+export function Header(props) {
+    const isHomepage=props.isHomepage
+    return <div className="main-header">
         <div className="top">
             <div className="navs">
                 <NavLink className="btn" to="/">home</NavLink>
@@ -12,7 +13,7 @@ export function Header() {
             </div>
         </div>
         <div className="bottom">
-            <SearchBox />
+            <SearchBox isHomepage={isHomepage}/>
         </div>
 
     </div>

@@ -4,7 +4,6 @@ import { WeatherApp } from './pages/WeatherApp.jsx'
 
 
 export default [
-
     {
         path: '/favorites/',
         component: Favorites
@@ -13,5 +12,4 @@ export default [
         path: '/',
         component: WeatherApp,
     },
-
 ]

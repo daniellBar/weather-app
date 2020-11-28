@@ -1,4 +1,5 @@
 import { locationService } from '../../services/locationService.js'
+import { utilsService } from '../../services/utilsService.js'
 
 
 export function loadLocation(locationInfo) {
@@ -8,10 +9,17 @@ export function loadLocation(locationInfo) {
   }
 }
 
-export function loadSuggestedLocations(input) {
+export function loadSuggestedLocations(query) {
   return async dispatch => {
-    const suggestedLocs = await locationService.getSuggested(input)
-    dispatch({ type: 'SET_SUGGESTED', suggestedLocs })
+    const suggestedLocations = await locationService.getSuggestedLocations(query)
+    dispatch({ type: 'SET_SUGGESTED', suggestedLocations })
+  }
+}
+
+export function toggleUnits(unit) {
+  return dispatch => {
+    const toggledUnits = utilsService.toggleUnits(unit);
+    dispatch({ type: 'SET_UNITS', toggledUnits })
   }
 }
 

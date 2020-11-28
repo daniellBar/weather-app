@@ -21,22 +21,23 @@ class _SearchBox extends Component {
 
     handleSelect = (event, val) => {
         if (!val) return
-        const locationInfo={
-           locationKey :val.key,
-           locationName:val.localizedName
-        }  
+        const locationInfo = {
+            locationKey: val.key,
+            locationName: val.localizedName
+        }
         this.props.loadLocation(locationInfo)
         this.props.history.push(`/`)
     }
 
     render() {
-        const { suggestedLocs } = this.props;
+        const { isHomepage, suggestedLocations } = this.props;
+        if (!isHomepage) return <div></div>
         return (
             <div className="search-box">
                 <Autocomplete
                     fullWidth
                     freeSolo
-                    options={suggestedLocs}
+                    options={suggestedLocations}
                     getOptionLabel={option => option.fullDisplayName}
                     renderOption={option => (
                         <div>
@@ -48,35 +49,16 @@ class _SearchBox extends Component {
                     onChange={this.handleSelect}
                     renderInput={(params) => (
                         <TextField {...params} label="enter location" margin="normal" variant="outlined" />
-                        // <MyTextField params={params} />
                     )}
                 />
             </div>
-
-
-            // <div className="search-box">
-            //     <input
-            //         className="search-input"
-            //         autoComplete="off"
-            //         name="location"
-            //         type="text"
-            //         value={this.state.location}
-            //         onChange={this.handleChange}
-            //         placeholder={`enter location`}
-            //         onKeyDown={e => (e.key === 'Enter') && this.onClickSearchButton()}
-            //     />
-            //     <div className="search-btn" onClick={this.onClickSearchButton}>
-            //         {/* <i className="fas fa-search"></i> */}
-            //         <SearchIcon />
-            //     </div>
-            // </div>
         )
     }
 }
 
 const mapStateToProps = state => {
     return {
-        suggestedLocs: state.locationReducer.suggestedLocs
+        suggestedLocations: state.suggestedLocations
     }
 }
 

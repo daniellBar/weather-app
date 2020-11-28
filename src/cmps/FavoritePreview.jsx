@@ -41,7 +41,7 @@ export class _FavoritePreview extends Component {
 
 const mapStateToProps = state => {
     return {
-        location: state.locationReducer.location
+        location: state.location
     }
 }
 
