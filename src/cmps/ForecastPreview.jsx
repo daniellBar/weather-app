@@ -8,7 +8,7 @@ export function ForecastPreview(props) {
     const minTempF = forecast.Temperature.Minimum.Value;
     const maxTempF = forecast.Temperature.Maximum.Value;
     return (
-        <div className="forecast-preview" >
+        <section className="forecast-preview" >
             <div className="forecast-info">
                 <div className="date">{moment(forecast.Date).format('ddd MM/DD/YY')}</div>
                 <div className="forecast-icon">
@@ -18,6 +18,6 @@ export function ForecastPreview(props) {
                 <TemperatureConverter minTemp={minTempF} maxTemp={maxTempF} unit={unit} />
                 <a className="read-more" target="_blank" href={forecast.Link}>Read More</a>
             </div>
-        </div>)
+        </section>)
 }
 

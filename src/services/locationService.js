@@ -27,7 +27,7 @@ async function getSuggestedLocations(query) {
         console.log('found in storage');
         return suggestedFromStorage;
     }
-    _loadSuggested()
+    _loadSuggestedLocations()
     const queryStr = `cities/autocomplete?apikey=${WEATHER_KEY}&q=${query}`;
     const suggestedLocations = await httpService.get(queryStr, LOCATION_API);
     const reducedSuggestedLocations = suggestedLocations.map(location => {
@@ -40,8 +40,7 @@ async function getSuggestedLocations(query) {
             fullDisplayName: `${location.LocalizedName}, ${location.AdministrativeArea.LocalizedName}, ${location.Country.LocalizedName}`
         }
     })
-    gSuggested[query] = reducedSuggestedLocations;
-    _saveSuggested();
+    _saveSuggestedLocations(query, reducedSuggestedLocations);
     return reducedSuggestedLocations;
 }
 
@@ -62,19 +61,16 @@ async function getLocation(locationInfo) {
         isFavorite: isFavorite(locationKey),
         dailyForecasts: locationForecast.DailyForecasts
     }
-    gLocations[locationKey] = location;
-    _saveLocations();
+    _saveLocations(locationKey, location);
     return location;
 }
 
 async function getFavorites() {
-    const favorites = storageService.loadFromStorage('favorites');
-    gFavorites = favorites;
-    _saveFavorites();
+    _loadFavorites()
     return (
-        await Promise.all(Object.keys(favorites).map(key => {
+        await Promise.all(Object.keys(gFavorites).map(key => {
             const locationKey = key
-            const locationName = favorites[key]
+            const locationName = gFavorites[key]
             return getLocation({ locationKey, locationName })
         }))
     )
@@ -150,11 +146,13 @@ function _queryStorage(key, collection) {
     else return null
 }
 
-function _saveSuggested() {
+function _saveSuggestedLocations(query, suggestedLocations) {
+    gSuggested[query] = suggestedLocations;
     storageService.saveToStorage('suggested', gSuggested);
 }
 
-function _saveLocations() {
+function _saveLocations(locationKey, location) {
+    gLocations[locationKey] = location;
     storageService.saveToStorage('locations', gLocations);
 }
 
@@ -162,7 +160,7 @@ function _saveFavorites() {
     storageService.saveToStorage('favorites', gFavorites);
 }
 
-function _loadSuggested() {
+function _loadSuggestedLocations() {
     const suggested = storageService.loadFromStorage('suggested')
     if (!suggested) return;
     gSuggested = suggested;
@@ -173,6 +171,12 @@ function _loadLocations() {
     const locations = storageService.loadFromStorage('locations');
     if (!locations) return;
     gLocations = locations
+}
+
+function _loadFavorites() {
+    const favorites = storageService.loadFromStorage('favorites');
+    if (!favorites) return;
+    gFavorites = favorites;
 }
 
 

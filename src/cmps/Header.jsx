@@ -5,7 +5,7 @@ import { SearchBox } from '../cmps/SearchBox'
 
 export function Header(props) {
     const isHomepage=props.isHomepage
-    return <div className="main-header">
+    return <section className="main-header">
         <div className="top">
             <div className="navs">
                 <NavLink className="btn" to="/">home</NavLink>
@@ -16,5 +16,5 @@ export function Header(props) {
             <SearchBox isHomepage={isHomepage}/>
         </div>
 
-    </div>
+    </section>
 }

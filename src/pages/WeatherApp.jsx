@@ -18,6 +18,7 @@ class _WeatherApp extends Component {
         }
     }
 
+
     onToggleFromFavorites = () => {
         const { locationKey, locationName } = this.props.location
         locationService.toggleFromFavorites({ locationKey, locationName })

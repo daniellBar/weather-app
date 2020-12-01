@@ -12,14 +12,14 @@ class _SearchBox extends Component {
         input: ''
     }
 
-    handleChange = (event, val) => {
+    handleChange = (ev,val) => {
         this.setState({ input: val }, () => {
             if (this.state.input === '') return
             this.props.loadSuggestedLocations(this.state.input)
         })
     }
 
-    handleSelect = (event, val) => {
+    handleSelect = (ev,val) => {
         if (!val) return
         const locationInfo = {
             locationKey: val.key,

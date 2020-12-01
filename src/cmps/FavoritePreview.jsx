@@ -22,7 +22,7 @@ export class _FavoritePreview extends Component {
             locationName: favorite.locationName
         }
         return (
-            <div className="favorite-preview" >
+            <section className="favorite-preview" >
                 <div className="favorite-info">
                     <div>{favorite.locationName}</div>
                     <div className="forecast-icon">
@@ -33,7 +33,7 @@ export class _FavoritePreview extends Component {
                     <div className="btn" onClick={() => this.onFavoriteClicked(locationInfo)}>See Next Days</div>
                     <div className="btn del-btn" onClick={() => onDelete(locationInfo)}>remove</div>
                 </div>
-            </div >
+            </section >
         )
     }
 
