@@ -17,10 +17,9 @@ export function loadSuggestedLocations(query) {
 }
 
 export function toggleUnits(unit) {
-  return dispatch => {
     const toggledUnits = utilsService.toggleUnits(unit);
-    dispatch({ type: 'SET_UNITS', toggledUnits })
+    return { type: 'SET_UNITS', toggledUnits }
   }
-}
+
 
 
