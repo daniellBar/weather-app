@@ -82,7 +82,7 @@ async function getReverseGeocoding(lat, lng) {
     console.log(data);
     const city = data.results[0].components.city || data.results[0].components.town || data.results[0].components.village;
     const country = data.results[0].components.country;
-    const suggestedQueryStr = `${city}`
+    const suggestedQueryStr = city
     console.log(suggestedQueryStr);
     const suggestedLocations = await getSuggestedLocations(suggestedQueryStr)
     return (suggestedLocations.map(location => {

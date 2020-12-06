@@ -30,8 +30,8 @@ export class _FavoritePreview extends Component {
                     </div>
                     <div className="description">{favorite.dailyForecasts[0].Day.IconPhrase}</div>
                     <TemperatureConverter minTemp={minTempF} maxTemp={maxTempF} unit={unit} />
-                    <div className="btn" onClick={() => this.onFavoriteClicked(locationInfo)}>See Next Days</div>
-                    <div className="btn del-btn" onClick={() => onDelete(locationInfo)}>remove</div>
+                    <div className="btn btn-next-days" onClick={() => this.onFavoriteClicked(locationInfo)}>See Next Days</div>
+                    <div className="btn btn-del" onClick={() => onDelete(locationInfo)}>Remove</div>
                 </div>
             </section >
         )

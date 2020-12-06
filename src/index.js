@@ -7,7 +7,6 @@ import * as serviceWorker from './serviceWorker';
 import {App} from './App';
 import { store } from './store/store.js';
 
-// import './assets/css/main.css'
 import './assets/scss/global.scss'
 
 ReactDOM.render(
