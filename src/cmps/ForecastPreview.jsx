@@ -10,11 +10,11 @@ export function ForecastPreview(props) {
     return (
         <section className="forecast-preview" >
             <div className="forecast-info">
-                <div className="date">{moment(forecast.Date).format('ddd MM/DD/YY')}</div>
+                <div className="forcest-date">{moment(forecast.Date).format('ddd MM/DD/YY')}</div>
                 <div className="forecast-icon">
                     <img src={require(`../assets/imgs/icons/${forecast.Day.Icon}.png`)} alt="" />
                 </div>
-                <div className="description">{forecast.Day.IconPhrase}</div>
+                <div className="forcest-description">{forecast.Day.IconPhrase}</div>
                 <TemperatureConverter minTemp={minTempF} maxTemp={maxTempF} unit={unit} />
                 <a className="read-more" target="_blank" href={forecast.Link}>Read More</a>
             </div>

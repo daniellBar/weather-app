@@ -22,13 +22,13 @@ export class _FavoritePreview extends Component {
             locationName: favorite.locationName
         }
         return (
-            <section className="favorite-preview" >
-                <div className="favorite-info">
+            <section className="favorite forecast-preview" >
+                <div className="forecast-info">
                     <div>{favorite.locationName}</div>
                     <div className="forecast-icon">
                         <img src={require(`../assets/imgs/icons/${favorite.dailyForecasts[0].Day.Icon}.png`)} alt="" />
                     </div>
-                    <div className="description">{favorite.dailyForecasts[0].Day.IconPhrase}</div>
+                    <div className="forecast-description">{favorite.dailyForecasts[0].Day.IconPhrase}</div>
                     <TemperatureConverter minTemp={minTempF} maxTemp={maxTempF} unit={unit} />
                     <div className="btn btn-next-days" onClick={() => this.onFavoriteClicked(locationInfo)}>See Next Days</div>
                     <div className="btn btn-del" onClick={() => onDelete(locationInfo)}>Remove</div>
