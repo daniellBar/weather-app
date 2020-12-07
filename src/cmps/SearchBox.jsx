@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
@@ -6,20 +5,19 @@ import { loadLocation, loadSuggestedLocations } from '../store/actions/locationA
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import TextField from '@material-ui/core/TextField';
 
-
 class _SearchBox extends Component {
     state = {
         input: ''
     }
-
-    handleChange = (ev,val) => {
+  
+    handleChange = (ev, val) => {
         this.setState({ input: val }, () => {
             if (this.state.input === '') return
             this.props.loadSuggestedLocations(this.state.input)
         })
     }
 
-    handleSelect = (ev,val) => {
+    handleSelect = (ev, val) => {
         if (!val) return
         const locationInfo = {
             locationKey: val.key,
@@ -30,7 +28,7 @@ class _SearchBox extends Component {
     }
 
     render() {
-        const { isHomepage, suggestedLocations } = this.props;
+        const { isHomepage, suggestedLocations} = this.props;
         if (!isHomepage) return <div></div>
         return (
             <div className="search-box">
@@ -41,17 +39,18 @@ class _SearchBox extends Component {
                     getOptionLabel={option => option.fullDisplayName}
                     renderOption={option => (
                         <div>
-                            <div className="bold">{option.localizedName}</div>
-                            <div>{`${option.administrativeArea}, ${option.country}`}</div>
+                            <div className="sugested-title bold">{option.localizedName}</div>
+                            <div className="sugested-title">{`${option.administrativeArea}, ${option.country}`}</div>
                         </div>
                     )}
                     onInputChange={this.handleChange}
                     onChange={this.handleSelect}
                     renderInput={(params) => (
-                        <TextField {...params} label="enter location" margin="normal" variant="outlined" />
+                        <TextField {...params} margin="normal" variant="outlined" placeholder="enter location" />
                     )}
                 />
             </div>
+
         )
     }
 }

@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { SearchBox } from '../cmps/SearchBox'
 
-
 export function Header(props) {
     const isHomepage=props.isHomepage
     return <header className="main-header">

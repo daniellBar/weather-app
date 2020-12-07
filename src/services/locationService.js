@@ -11,7 +11,6 @@ let gSuggested = {}
 let gLocations = {}
 let gFavorites = {}
 
-
 export const locationService = {
     getSuggestedLocations,
     getLocation,

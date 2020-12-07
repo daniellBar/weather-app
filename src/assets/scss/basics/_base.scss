@@ -3,14 +3,14 @@
 }
 
 html {
-  font-family: montserrat;
+  font-family: montserrat-bold;
   line-height: 1.6;
 }
 
 body {
+  color: $clr2;
   margin: 0;
-  color: $clr7;
-  background-image: linear-gradient($clr8, $clr9);
+  background-image: linear-gradient($clr3,$clr4,$clr5,$clr6);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
@@ -22,10 +22,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: montserrat;
+  font-family: montserrat-black;
   margin: 0 0 0.6em;
   line-height: 1;
   text-align: center;
+}
+
+.link,
+a {
+  text-decoration: none;
 }
 
 .btn {
@@ -37,10 +42,10 @@ h6 {
   text-decoration: none;
   text-transform: uppercase;
   padding: 10px;
-  font-family: montserrat;
-  color: $clr7;
+  font-family: montserrat-black;
+  color: $clr2;
   &:hover {
-    border-bottom: 1px solid $clr7;
+    color: $clr6;
   }
 }
 
@@ -60,14 +65,14 @@ h6 {
   &.active {
     font-size: 2rem;
     .MuiIcon-root {
-      color: blue;
+      color: $clr5;
     }
   }
 }
 
 .btn-unit {
   text-align: center;
-  padding: 10px;
+  padding: 15px;
   margin-bottom: 20px;
   text-transform: capitalize;
   box-shadow: 1px 1px 2px 2px #00000033;
@@ -80,8 +85,16 @@ h6 {
   }
 }
 
-.btn-next-days{
+.btn-next-days {
   &:hover {
     color: blue;
+  }
+}
+
+.btn-read-more{
+  font-family: montserrat-black;
+  color: $clr3;
+  &:hover {
+    color: $clr2;
   }
 }

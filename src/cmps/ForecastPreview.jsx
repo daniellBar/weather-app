@@ -2,7 +2,6 @@ import React from "react";
 import moment from 'moment'
 import { TemperatureConverter } from './TemperatureConverter.jsx'
 
-
 export function ForecastPreview(props) {
     const { forecast,unit } = props;
     const minTempF = forecast.Temperature.Minimum.Value;
@@ -16,7 +15,7 @@ export function ForecastPreview(props) {
                 </div>
                 <div className="forcest-description">{forecast.Day.IconPhrase}</div>
                 <TemperatureConverter minTemp={minTempF} maxTemp={maxTempF} unit={unit} />
-                <a className="read-more" target="_blank" href={forecast.Link}>Read More</a>
+                <a className="btn-read-more" target="_blank" href={forecast.Link}>Read More</a>
             </div>
         </section>)
 }

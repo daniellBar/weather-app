@@ -37,7 +37,6 @@ class _Favorites extends Component {
         if (location.locationKey === locationInfo.locationKey && location.locationName === locationInfo.locationName) {
             this.props.loadLocation(locationInfo)
         }
-
     }
 
     render() {

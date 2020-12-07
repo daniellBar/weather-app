@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "homepage": "https://daniellBar.github.io/weather-app",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.56",

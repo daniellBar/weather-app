@@ -4,14 +4,12 @@ import { withRouter } from 'react-router-dom'
 import { TemperatureConverter } from './TemperatureConverter'
 import { loadLocation } from '../store/actions/locationAction.js'
 
-
 export class _FavoritePreview extends Component {
 
     onFavoriteClicked = (locationInfo) => {
         this.props.loadLocation(locationInfo)
         this.props.history.push(`/`)
     }
-
 
     render() {
         const { favorite, onDelete, unit } = this.props;

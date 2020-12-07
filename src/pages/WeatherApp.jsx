@@ -5,7 +5,6 @@ import { ForecastList } from '../cmps/ForecastList.jsx'
 import Icon from '@material-ui/core/Icon';
 import { locationService } from "../services/locationService.js";
 
-
 class _WeatherApp extends Component {
 
     componentDidMount() {
@@ -18,7 +17,6 @@ class _WeatherApp extends Component {
         }
     }
 
-
     onToggleFromFavorites = () => {
         const { locationKey, locationName } = this.props.location
         locationService.toggleFromFavorites({ locationKey, locationName })
@@ -29,7 +27,6 @@ class _WeatherApp extends Component {
         const { firstUnit } = this.props.units
         this.props.toggleUnits(firstUnit)
     }
-
 
     render() {
         const { dailyForecasts, isFavorite, locationName } = this.props.location
