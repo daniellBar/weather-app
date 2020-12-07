@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/weather-app/static/css/main.fa40698f.chunk.css",
-    "main.js": "/weather-app/static/js/main.8c4b1409.chunk.js",
-    "main.js.map": "/weather-app/static/js/main.8c4b1409.chunk.js.map",
-    "runtime-main.js": "/weather-app/static/js/runtime-main.8ce43dfd.js",
-    "runtime-main.js.map": "/weather-app/static/js/runtime-main.8ce43dfd.js.map",
-    "static/js/2.f32455aa.chunk.js": "/weather-app/static/js/2.f32455aa.chunk.js",
-    "static/js/2.f32455aa.chunk.js.map": "/weather-app/static/js/2.f32455aa.chunk.js.map",
+    "main.js": "/weather-app/static/js/main.f384b1a3.chunk.js",
+    "main.js.map": "/weather-app/static/js/main.f384b1a3.chunk.js.map",
+    "runtime-main.js": "/weather-app/static/js/runtime-main.e6f382d7.js",
+    "runtime-main.js.map": "/weather-app/static/js/runtime-main.e6f382d7.js.map",
+    "static/js/2.4d531588.chunk.js": "/weather-app/static/js/2.4d531588.chunk.js",
+    "static/js/2.4d531588.chunk.js.map": "/weather-app/static/js/2.4d531588.chunk.js.map",
     "index.html": "/weather-app/index.html",
-    "precache-manifest.cdf7b10d9775693210bc1a605cb565e8.js": "/weather-app/precache-manifest.cdf7b10d9775693210bc1a605cb565e8.js",
+    "precache-manifest.ae714752ccff6e746a511dd6bd50e5b8.js": "/weather-app/precache-manifest.ae714752ccff6e746a511dd6bd50e5b8.js",
     "service-worker.js": "/weather-app/service-worker.js",
     "static/css/main.fa40698f.chunk.css.map": "/weather-app/static/css/main.fa40698f.chunk.css.map",
-    "static/js/2.f32455aa.chunk.js.LICENSE.txt": "/weather-app/static/js/2.f32455aa.chunk.js.LICENSE.txt",
+    "static/js/2.4d531588.chunk.js.LICENSE.txt": "/weather-app/static/js/2.4d531588.chunk.js.LICENSE.txt",
     "static/media/15.png": "/weather-app/static/media/15.39ac499c.png",
     "static/media/16.png": "/weather-app/static/media/16.0cf9cad1.png",
     "static/media/17.png": "/weather-app/static/media/17.3c85da3e.png",
@@ -19,9 +19,9 @@
     "static/media/global.scss": "/weather-app/static/media/Montserrat-Regular.ee653992.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.8ce43dfd.js",
-    "static/js/2.f32455aa.chunk.js",
+    "static/js/runtime-main.e6f382d7.js",
+    "static/js/2.4d531588.chunk.js",
     "static/css/main.fa40698f.chunk.css",
-    "static/js/main.8c4b1409.chunk.js"
+    "static/js/main.f384b1a3.chunk.js"
   ]
 }
