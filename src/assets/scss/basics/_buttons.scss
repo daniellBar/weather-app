@@ -1,0 +1,61 @@
+
+.btn {
+    cursor: pointer;
+  }
+  
+  .btn-nav:link,
+  .btn-nav:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+    font-family: montserrat-black;
+    color: $clr2;
+    &:hover {
+      color: $clr6;
+    }
+  }
+
+.btn-fav {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    &.active {
+      font-size: 2rem;
+      .MuiIcon-root {
+        color: $clr5;
+      }
+    }
+  }
+  
+  .btn-unit {
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    box-shadow: 1px 1px 2px 2px #00000033;
+    border-radius: 10px;
+  }
+  
+  .btn-del {
+    color: $clr3;
+    &:hover {
+      color: #8b0000;
+    }
+  }
+  
+  .btn-next-days {
+    color: $clr3;
+    &:hover {
+        color: $clr2;
+    }
+  }
+  
+  .btn-read-more{
+    font-family: montserrat-black;
+    color: $clr3;
+    &:hover {
+      color: $clr2;
+    }
+  }

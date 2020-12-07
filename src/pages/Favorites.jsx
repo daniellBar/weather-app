@@ -43,7 +43,7 @@ class _Favorites extends Component {
         const { favorites } = this.state
         const { secondaryUnit, firstUnit } = this.props.units
         return <section className="favorites-page">
-            <h2 className="fav-header">
+            <h2 className="favorites-page-title">
                 {`Your favorite locations forecast on ${moment(new Date()).format('MM/DD/YY')}`}
             </h2>
             {favorites && <div className="btn btn-unit" onClick={this.onChangeUnit} >{`View in ${secondaryUnit}`}</div>}
