@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.8f07ff8c.chunk.css",
-    "main.js": "/static/js/main.7f172906.chunk.js",
-    "main.js.map": "/static/js/main.7f172906.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.83c3e0c4.js",
-    "runtime-main.js.map": "/static/js/runtime-main.83c3e0c4.js.map",
-    "static/js/2.f32455aa.chunk.js": "/static/js/2.f32455aa.chunk.js",
-    "static/js/2.f32455aa.chunk.js.map": "/static/js/2.f32455aa.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.1908112b8312ebdb2ce5197eeadb4e5a.js": "/precache-manifest.1908112b8312ebdb2ce5197eeadb4e5a.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.8f07ff8c.chunk.css.map": "/static/css/main.8f07ff8c.chunk.css.map",
-    "static/js/2.f32455aa.chunk.js.LICENSE.txt": "/static/js/2.f32455aa.chunk.js.LICENSE.txt",
-    "static/media/15.png": "/static/media/15.39ac499c.png",
-    "static/media/16.png": "/static/media/16.0cf9cad1.png",
-    "static/media/17.png": "/static/media/17.3c85da3e.png",
-    "static/media/41.png": "/static/media/41.421c13f1.png",
-    "static/media/global.scss": "/static/media/Montserrat-Regular.ee653992.ttf"
+    "main.css": "/weather-app/static/css/main.fa40698f.chunk.css",
+    "main.js": "/weather-app/static/js/main.8c4b1409.chunk.js",
+    "main.js.map": "/weather-app/static/js/main.8c4b1409.chunk.js.map",
+    "runtime-main.js": "/weather-app/static/js/runtime-main.8ce43dfd.js",
+    "runtime-main.js.map": "/weather-app/static/js/runtime-main.8ce43dfd.js.map",
+    "static/js/2.f32455aa.chunk.js": "/weather-app/static/js/2.f32455aa.chunk.js",
+    "static/js/2.f32455aa.chunk.js.map": "/weather-app/static/js/2.f32455aa.chunk.js.map",
+    "index.html": "/weather-app/index.html",
+    "precache-manifest.cdf7b10d9775693210bc1a605cb565e8.js": "/weather-app/precache-manifest.cdf7b10d9775693210bc1a605cb565e8.js",
+    "service-worker.js": "/weather-app/service-worker.js",
+    "static/css/main.fa40698f.chunk.css.map": "/weather-app/static/css/main.fa40698f.chunk.css.map",
+    "static/js/2.f32455aa.chunk.js.LICENSE.txt": "/weather-app/static/js/2.f32455aa.chunk.js.LICENSE.txt",
+    "static/media/15.png": "/weather-app/static/media/15.39ac499c.png",
+    "static/media/16.png": "/weather-app/static/media/16.0cf9cad1.png",
+    "static/media/17.png": "/weather-app/static/media/17.3c85da3e.png",
+    "static/media/41.png": "/weather-app/static/media/41.421c13f1.png",
+    "static/media/global.scss": "/weather-app/static/media/Montserrat-Regular.ee653992.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.83c3e0c4.js",
+    "static/js/runtime-main.8ce43dfd.js",
     "static/js/2.f32455aa.chunk.js",
-    "static/css/main.8f07ff8c.chunk.css",
-    "static/js/main.7f172906.chunk.js"
+    "static/css/main.fa40698f.chunk.css",
+    "static/js/main.8c4b1409.chunk.js"
   ]
 }
