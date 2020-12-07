@@ -1,7 +1,7 @@
 import Axios from 'axios';
 
-const FORECAST_URL = 'http://dataservice.accuweather.com/forecasts/v1/daily/5day/'
-const LOCATION_URL = 'http://dataservice.accuweather.com/locations/v1/'
+const FORECAST_URL = 'https://dataservice.accuweather.com/forecasts/v1/daily/5day/'
+const LOCATION_URL = 'https://dataservice.accuweather.com/locations/v1/'
 const GEOCODE_URL = 'https://api.opencagedata.com/geocode/v1/'
 
 var axios = Axios.create({
