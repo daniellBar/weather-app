@@ -1,9 +1,9 @@
 {
+  "homepage": "https://daniellBar.github.io/weather-app",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "homepage": "https://daniellBar.github.io/weather-app",
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.56",
