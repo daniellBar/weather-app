@@ -22,17 +22,20 @@
   margin-left: 30px;
 }
 
-
-.MuiOutlinedInput-notchedOutline{
-  border:0 !important;
+.MuiOutlinedInput-notchedOutline {
+  border: 0 !important;
 }
 
 .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-input:first-child {
   padding-top: 1.5px;
 }
-.sugested-title{
+
+.MuiAutocomplete-endAdornment {
+  top: 5px !important;
+}
+.suggested-title {
   font-family: montserrat-bold;
 }
-.bold{
+.bold {
   color: $clr3;
 }

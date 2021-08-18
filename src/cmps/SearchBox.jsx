@@ -39,8 +39,8 @@ class _SearchBox extends Component {
                     getOptionLabel={option => option.fullDisplayName}
                     renderOption={option => (
                         <div>
-                            <div className="sugested-title bold">{option.localizedName}</div>
-                            <div className="sugested-title">{`${option.administrativeArea}, ${option.country}`}</div>
+                            <div className="suggested-title bold">{option.localizedName}</div>
+                            <div className="suggested-title">{`${option.administrativeArea}, ${option.country}`}</div>
                         </div>
                     )}
                     onInputChange={this.handleChange}
